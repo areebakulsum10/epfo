@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JobPortal ♿ - Jobs</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<header>
+  <h1 id="logo">JobPortal ♿</h1>
+  <nav aria-label="Main Navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="jobs.html" aria-current="page">Jobs</a></li>
+      <li><a href="apply.html">Apply</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main-content">
+  <section aria-labelledby="filters-title">
+    <h2 id="filters-title">Filter Jobs</h2>
+    <label for="location">Location:</label>
+    <select id="location">
+      <option value="">All</option>
+      <option value="remote">Remote</option>
+      <option value="delhi">Delhi</option>
+      <option value="mumbai">Mumbai</option>
+    </select>
+
+    <label for="jobType">Job Type:</label>
+    <select id="jobType">
+      <option value="">All</option>
+      <option value="fulltime">Full-Time</option>
+      <option value="parttime">Part-Time</option>
+      <option value="internship">Internship</option>
+    </select>
+
+    <button id="filterBtn">Filter Jobs</button>
+    <p id="filterNotice" aria-live="polite"></p>
+  </section>
+
+  <section id="jobs-listing" aria-labelledby="jobs-title">
+    <h2 id="jobs-title">All Job Openings</h2>
+    <div class="job-listing" tabindex="0">
+      <h3>Frontend Developer</h3>
+      <p>Location: Delhi | Type: Full-Time</p>
+      <button class="apply-btn" onclick="location.href='apply.html'">Apply</button>
+    </div>
+    <div class="job-listing" tabindex="0">
+      <h3>UX Designer</h3>
+      <p>Location: Remote | Type: Internship</p>
+      <button class="apply-btn" onclick="location.href='apply.html'">Apply</button>
+    </div>
+    <div class="job-listing" tabindex="0">
+      <h3>Backend Developer</h3>
+      <p>Location: Mumbai | Type: Full-Time</p>
+      <button class="apply-btn" onclick="location.href='apply.html'">Apply</button>
+    </div>
+    <div class="job-listing" tabindex="0">
+      <h3>Data Analyst</h3>
+      <p>Location: Delhi | Type: Full-Time</p>
+      <button class="apply-btn" onclick="location.href='apply.html'">Apply</button>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>Contact: <a href="mailto:info@jobportal.com">info@jobportal.com</a> | Phone: +91 1234567890</p>
+  <p>&copy; 2026 JobPortal ♿. All rights reserved.</p>
+</footer>
+
+<!-- Chat Widget -->
+<div id="chatWidget" aria-label="Chat with Us">
+  <div id="chatHeader" tabindex="0">Chat with Us 💬</div>
+  <div id="chatContent">
+    <div id="chatMessages"></div>
+    <div id="chatInput">
+      <input type="text" id="userInput" placeholder="Type your message..." aria-label="Type your message"/>
+      <button id="sendBtn">Send</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

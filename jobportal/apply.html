@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JobPortal ♿ - Apply</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<header>
+  <h1 id="logo">JobPortal ♿</h1>
+  <nav aria-label="Main Navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="jobs.html">Jobs</a></li>
+      <li><a href="apply.html" aria-current="page">Apply</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main-content">
+  <section aria-labelledby="apply-title">
+    <h2 id="apply-title">Apply for a Job</h2>
+    <form id="applicationForm" aria-label="Job Application Form">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" required />
+
+      <label for="jobSelect">Select Job:</label>
+      <select id="jobSelect" required>
+        <option value="">--Choose--</option>
+        <option value="frontend">Frontend Developer</option>
+        <option value="ux">UX Designer</option>
+        <option value="backend">Backend Developer</option>
+        <option value="data">Data Analyst</option>
+      </select>
+
+      <label for="resume">Resume (PDF only):</label>
+      <input type="file" id="resume" accept=".pdf" required />
+
+      <button type="submit">Submit Application</button>
+      <p id="formMessage" aria-live="polite"></p>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <p>Contact: <a href="mailto:info@jobportal.com">info@jobportal.com</a> | Phone: +91 1234567890</p>
+  <p>&copy; 2026 JobPortal ♿. All rights reserved.</p>
+</footer>
+
+<div id="chatWidget" aria-label="Chat with Us">
+  <div id="chatHeader" tabindex="0">Chat with Us 💬</div>
+  <div id="chatContent">
+    <div id="chatMessages"></div>
+    <div id="chatInput">
+      <input type="text" id="userInput" placeholder="Type your message..." aria-label="Type your message"/>
+      <button id="sendBtn">Send</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
